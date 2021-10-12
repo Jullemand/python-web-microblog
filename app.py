@@ -14,13 +14,13 @@ import datetime
 from flask import Flask, render_template, request
 from pymongo import MongoClient
 
-
 def create_app():
+
     # Has to be this name 
     # Then deployment mechanism will only deploy this app and MongoClient ONCE
 
     app = Flask(__name__)
-    client = MongoClient("mongodb+srv://Julian:valdman11@microbrog-application.tm7r6.mongodb.net/test")
+    client = MongoClient("mongodb+srv://Julian:valdman11@cluster-microblog.tm7r6.mongodb.net/test")
     app.db = client.microblog # cluster name is microblog
 
     # entries = []
