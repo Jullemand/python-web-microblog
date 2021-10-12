@@ -21,7 +21,7 @@ def create_app():
 
     app = Flask(__name__)
     client = MongoClient("mongodb+srv://Julian:valdman11@cluster-microblog.tm7r6.mongodb.net/test")
-    app.db = client.microblog # cluster name is microblog
+    app.db = client.microblog # database name is microblog
 
     # entries = []
 
